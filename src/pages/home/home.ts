@@ -38,5 +38,13 @@ export class HomePage {
 
   onGuardarClicked() {
     // guardarEnApi(this.parqueSeleccionado());
+
+    //muestro un modal para mostrar algo
+    let loader = this.loadingCtrl.create({
+      content: "ACA SE ENVIARIA A LA API",
+      duration: 3000
+    });
+    loader.present();
+
   }
 }
