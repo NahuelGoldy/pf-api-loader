@@ -18,7 +18,7 @@ $ cd myTabsProject
 
 ### Para Geolocation:
 
-Vamos a necesitar un Provider
+(!) [SI SE NECESITARA SEGUIMIENTO CONTINUO POR GPS] -> Vamos a necesitar un Provider
 
 ```bash
 $ ionic g provider MyProvider

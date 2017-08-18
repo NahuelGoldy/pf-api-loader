@@ -9,7 +9,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { LocationTracker } from '../providers/location-tracker/location-tracker';
 import { BackgroundGeolocation } from "@ionic-native/background-geolocation";
 import { Geolocation } from '@ionic-native/geolocation';
 
@@ -32,7 +31,6 @@ import { Geolocation } from '@ionic-native/geolocation';
     TabsPage
   ],
   providers: [
-    LocationTracker,
     BackgroundGeolocation,
     Geolocation,
     StatusBar,

@@ -24,14 +24,14 @@
     </ion-item>
 
     <ion-item>
-      <ion-label fixed>Posición GPS</ion-label>
-      <ion-input type="text" value="-31.5344, -10.1458" disabled="true"></ion-input>
+      <ion-label fixed>Coordenadas</ion-label>
+      <ion-input type="text" disabled="true" value="({{lat | number : '1.2-2' }}, {{lng | number : '1.2-2' }})"></ion-input>
     </ion-item>
 
   </ion-list>
 
   <div padding>
-    <button ion-button block color="secondary">Setear posicion GPS</button>
+    <button ion-button block color="secondary" (click)="onSetClicked()">Setear posicion GPS</button>
   </div>
 
 
