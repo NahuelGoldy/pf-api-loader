@@ -19,6 +19,26 @@
         </ion-item>
 
         <ion-item>
+          <ion-label>Telefono</ion-label>
+          <ion-input type="text" [(ngModel)]="parqueSeleccionado.telefono" name="telefono" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Horarios</ion-label>
+          <ion-input type="text" [(ngModel)]="parqueSeleccionado.horarios" name="horarios" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Cuadro tarifario</ion-label>
+          <ion-input type="text" [(ngModel)]="parqueSeleccionado.cuadroTarifario" name="cuadroTarifario" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Precio por hora</ion-label>
+          <ion-input type="number" [(ngModel)]="parqueSeleccionado.precioHora" name="cuadroTarifario" required></ion-input>
+        </ion-item>
+
+        <ion-item>
           <ion-label>Capacidad</ion-label>
           <ion-input type="number" [(ngModel)]="parqueSeleccionado.capacidad" name="capacidad" required></ion-input>
         </ion-item>
@@ -26,6 +46,16 @@
         <ion-item>
           <ion-label fixed>Coordenadas</ion-label>
           <ion-input type="text" disabled="true" value="({{lat | number : '1.2-2' }}, {{lng | number : '1.2-2' }})"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Es techado</ion-label>
+          <ion-checkbox [(ngModel)]="parqueSeleccionado.esTechado" name="esTechado" required></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Acepta tarjetas</ion-label>
+          <ion-checkbox [(ngModel)]="parqueSeleccionado.aceptaTarjeta" name="aceptaTarjeta" required></ion-checkbox>
         </ion-item>
 
       </ion-list>
