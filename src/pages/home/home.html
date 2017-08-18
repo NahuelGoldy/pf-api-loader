@@ -6,37 +6,37 @@
 
 <ion-content padding>
 
-  <ion-list>
+      <ion-list>
 
-    <ion-item>
-      <ion-label>Nombre</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
+        <ion-item>
+          <ion-label>Nombre</ion-label>
+          <ion-input type="text" [(ngModel)]="parqueSeleccionado.nombre" name="nombre" required></ion-input>
+        </ion-item>
 
-    <ion-item>
-      <ion-label>Direccion</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
+        <ion-item>
+          <ion-label>Direccion</ion-label>
+          <ion-input type="text" [(ngModel)]="parqueSeleccionado.direccion" name="direccion" required></ion-input>
+        </ion-item>
 
-    <ion-item>
-      <ion-label>Capacidad</ion-label>
-      <ion-input type="number" value=""></ion-input>
-    </ion-item>
+        <ion-item>
+          <ion-label>Capacidad</ion-label>
+          <ion-input type="number" [(ngModel)]="parqueSeleccionado.capacidad" name="capacidad" required></ion-input>
+        </ion-item>
 
-    <ion-item>
-      <ion-label fixed>Coordenadas</ion-label>
-      <ion-input type="text" disabled="true" value="({{lat | number : '1.2-2' }}, {{lng | number : '1.2-2' }})"></ion-input>
-    </ion-item>
+        <ion-item>
+          <ion-label fixed>Coordenadas</ion-label>
+          <ion-input type="text" disabled="true" value="({{lat | number : '1.2-2' }}, {{lng | number : '1.2-2' }})"></ion-input>
+        </ion-item>
 
-  </ion-list>
+      </ion-list>
 
-  <div padding>
-    <button ion-button block color="secondary" (click)="onSetClicked()">Setear posicion GPS</button>
-  </div>
+      <div padding>
+        <button ion-button block color="secondary" (click)="onSetClicked()">Setear posicion GPS</button>
+      </div>
 
 
-  <div padding>
-    <button ion-button block >Cargar Parque</button>
-  </div>
+      <div padding>
+        <button ion-button block (click)="onGuardarClicked()">Guardar Parque</button>
+      </div>
 
 </ion-content>
