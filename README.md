@@ -65,12 +65,14 @@ $ ionic run ios
 
 Windows: antes del build -> editar el config.xml para targetear Windows 10 (sino defaultea a W8)
 
+
+```bash
+$ ionic platform add windows
+
 <platform name="windows">
     <preference name="windows-target-version" value="10.0" />
 </platform>
 
-```bash
-$ ionic platform add windows
 $ ionic build windows
 $ ionic run android
 ```
