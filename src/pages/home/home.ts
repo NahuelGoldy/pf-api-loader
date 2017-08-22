@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { LoadingController } from 'ionic-angular';
-import {Parque} from '../../domain/parque';
-import {ApiService} from '../../services/api.service';
+import { Parque } from '../../domain/parque';
+import { ApiService } from '../../services/api.service';
+import {SharedService} from "../../services/shared.service";
 
 @Component({
   selector: 'page-home',
@@ -15,7 +16,7 @@ export class HomePage {
   lat: string = "0";
   lng: string = "0";
 
-  constructor(public navCtrl: NavController, private geolocation: Geolocation, public loadingCtrl: LoadingController, private apiService: ApiService) {
+  constructor(public navCtrl: NavController, private geolocation: Geolocation, public loadingCtrl: LoadingController, private apiService: ApiService, public sharedService: SharedService) {
 
   }
 
@@ -60,6 +61,7 @@ export class HomePage {
           //parquesList.push(json);
         });
 */
+        this.sharedService.pushParque(this.parqueSeleccionado);
         this.clearFields(f);
       });
   }

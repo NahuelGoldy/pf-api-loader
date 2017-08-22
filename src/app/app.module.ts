@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { BackgroundGeolocation } from "@ionic-native/background-geolocation";
 import { Geolocation } from '@ionic-native/geolocation';
 import {ApiService} from '../services/api.service';
+import {SharedService} from '../services/shared.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {ApiService} from '../services/api.service';
     BackgroundGeolocation,
     Geolocation,
     ApiService,
+    SharedService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

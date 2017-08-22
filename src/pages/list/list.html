@@ -10,9 +10,28 @@
 
   <ion-list>
 
-    <button ion-item *ngFor="let item of items">
-      {{ item }}
-    </button>
+    <!--<button ion-item *ngFor="let item of parks">-->
+      <!--{{ item.nombre }} ({{ item.lat }}, {{item.lng}})-->
+    <!--</button>-->
+
+    <ion-item *ngFor="let item of parks">
+
+      <ion-label>
+        {{ item.nombre }}
+      </ion-label>
+      <div item-content>
+        <ion-label>
+          {{ item.direccion }}
+        </ion-label>
+        <ion-label>
+          ({{ item.lat | number : '1.2-4' }}, {{item.lng | number : '1.2-4' }})
+        </ion-label>
+        <ion-label>
+          ${{item.precioHora}} la hora
+        </ion-label>
+      </div>
+
+    </ion-item>
 
   </ion-list>
 
