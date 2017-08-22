@@ -8,7 +8,7 @@ import {Observable} from 'rxjs/Rx';
 export class ApiService {
   // server URL
   //TODO cambiar la URL de la API
-  private baseURL = 'http://localhost:8080/api/';
+  private baseURL = 'http://dondeestaciono.cloudapp.net:8080/';
 
   //
   // HEADERS
