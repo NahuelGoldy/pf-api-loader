@@ -36,9 +36,9 @@ export class HomePage {
     loader.present().then(() => {
       this.geolocation.getCurrentPosition().then(res => {
         this.lat = res.coords.latitude.toString();
-        this.parqueSeleccionado.lat = res.coords.latitude;
+        this.parqueSeleccionado.posicionLatitud = res.coords.latitude;
         this.lng = res.coords.longitude.toString();
-        this.parqueSeleccionado.lng = res.coords.longitude;
+        this.parqueSeleccionado.posicionLongitud = res.coords.longitude;
       }).catch((error) => {
         console.log('Error getting location', error);
       });
@@ -52,17 +52,15 @@ export class HomePage {
       duration: 3000
     });
     loader.present().then(() => {
-/*
+
       // guardarEnApi(this.parqueSeleccionado());
       this.apiService.post('parques', this.parqueSeleccionado).subscribe(
         json => {
-          //si me devuelve el json con el parque que le POSTee es porque se guardo correctamente
-          //entonces, lo encolo en la lista de parques
-          //parquesList.push(json);
+          // si me devuelve el json con el parque que le POSTee es porque se guardo correctamente
+          // entonces, lo encolo en la lista de parques
+          this.sharedService.pushParque(this.parqueSeleccionado);
+          this.clearFields(f);
         });
-*/
-        this.sharedService.pushParque(this.parqueSeleccionado);
-        this.clearFields(f);
       });
   }
 }

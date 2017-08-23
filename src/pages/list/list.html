@@ -17,17 +17,17 @@
     <ion-item *ngFor="let item of parks">
 
       <ion-label>
-        {{ item.nombre }}
+        {{ item.nombreEstacionamiento }}
       </ion-label>
       <div item-content>
         <ion-label>
-          {{ item.direccion }}
+          {{ item.direccionEstacionamiento }}
         </ion-label>
         <ion-label>
-          ({{ item.lat | number : '1.2-4' }}, {{item.lng | number : '1.2-4' }})
+          ({{ item.posicionLatitud | number : '1.2-4' }}, {{item.posicionLongitud | number : '1.2-4' }})
         </ion-label>
         <ion-label>
-          ${{item.precioHora}} la hora
+          ${{item.precioPorHora}} la hora
         </ion-label>
       </div>
 

@@ -1,14 +1,14 @@
 export class Parque {
-  nombre: string;
-  direccion: string;
+  nombreEstacionamiento: string;
+  direccionEstacionamiento: string;
   capacidad: number;
-  lat: number;
-  lng: number;
+  posicionLatitud: number;
+  posicionLongitud: number;
   esTechado: boolean;
   aceptaTarjeta: boolean;
   horarios: string;
-  precioHora: number;
+  precioPorHora: number;
   telefono: string;
   cuadroTarifario: string;
-  idDuenio = 1;
+  duenio_id = 1;
 }
