@@ -6,33 +6,46 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="content">
 
-  <ion-list>
+    <ion-card *ngFor="let item of parks">
 
-    <!--<button ion-item *ngFor="let item of parks">-->
-      <!--{{ item.nombre }} ({{ item.lat }}, {{item.lng}})-->
-    <!--</button>-->
+      <ion-grid>
+        <ion-row class="header">
+          <ion-col col-2>
+            <ion-icon name="car" class="icon"></ion-icon>
+          </ion-col>
 
-    <ion-item *ngFor="let item of parks">
+          <ion-col col-10>
+            <ion-label class="label-nombre">
+              {{ item.nombreEstacionamiento }}
+            </ion-label>
+          </ion-col>
+        </ion-row>
 
-      <ion-label>
-        {{ item.nombreEstacionamiento }}
-      </ion-label>
-      <div item-content>
-        <ion-label>
-          {{ item.direccionEstacionamiento }}
-        </ion-label>
-        <ion-label>
-          ({{ item.posicionLatitud | number : '1.2-4' }}, {{item.posicionLongitud | number : '1.2-4' }})
-        </ion-label>
-        <ion-label>
-          ${{item.precioPorHora}} la hora
-        </ion-label>
-      </div>
+        <ion-row class="label-menor">
+          <ion-col col-8>
+            <ion-label>
+              Direccion: {{ item.direccionEstacionamiento }}
+            </ion-label>
+          </ion-col>
 
-    </ion-item>
+          <ion-col col-4>
+            <ion-label>
+              ${{item.precioPorHora}}/hora
+            </ion-label>
+          </ion-col>
+        </ion-row>
 
-  </ion-list>
+        <ion-row class="label-menor">
+          <ion-col col-12>
+            <ion-label>
+              Coordenadas GPS: ({{ item.posicionLatitud | number : '1.2-4' }}, {{item.posicionLongitud | number : '1.2-4' }})
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card>
 
 </ion-content>

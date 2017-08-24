@@ -53,7 +53,6 @@ export class HomePage {
     });
     loader.present().then(() => {
 
-      // guardarEnApi(this.parqueSeleccionado());
       this.apiService.post('parques', this.parqueSeleccionado).subscribe(
         json => {
           // si me devuelve el json con el parque que le POSTee es porque se guardo correctamente

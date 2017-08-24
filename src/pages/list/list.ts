@@ -12,7 +12,6 @@ export class ListPage {
   parks: Parque[] = [];
 
   constructor(public navCtrl: NavController, public sharedService: SharedService) {
-      this.parks = sharedService.getParques();
   }
 
   ionViewWillEnter() {

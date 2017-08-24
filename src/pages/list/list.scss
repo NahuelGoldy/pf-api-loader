@@ -1,3 +1,38 @@
-page-about {
+page-list {
 
+  .label-nombre {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  .label-menor {
+    color: darkgrey;
+    font-size: 0.8em;
+    flex: 1;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ion-grid {
+    padding: 0;
+    height: 100%;
+  }
+
+  .icon {
+    font-size: 300%;
+    padding-left: 15%;
+  }
+
+  .header {
+    background-color: #488aff;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+  }
 }
