@@ -1,3 +1,31 @@
 page-login {
 
+  .login-page{
+    //background-color: #5784ff;
+    background-image: url("../assets/img/fondo1.jpg");
+    //background-image: url("../assets/img/fondo2.jpg");
+    background-size: cover;
+    display: flex;
+  }
+
+  .login-page .icon {
+    font-size: 600%;
+    color:  #ffffff;
+  }
+
+  .login-page .form-container {
+    align-self: flex-end;
+  }
+
+  ion-grid {
+    padding: 0;
+    height: 100%;
+  }
+
+  ion-row {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
 }

@@ -13,28 +13,42 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="login-page">
 
-  <form #f="ngForm">
+  <ion-grid>
 
-    <ion-list>
+    <!--<ion-row>-->
+      <!--<ion-icon name="car" class="icon"></ion-icon>-->
+    <!--</ion-row>-->
 
-      <ion-item>
-        <ion-label>Email</ion-label>
-        <ion-input type="text" [(ngModel)]="credenciales.email" name="email" required></ion-input>
-      </ion-item>
+    <ion-row>
+      <div class="form-container">
 
-      <ion-item>
-        <ion-label>Password</ion-label>
-        <ion-input type="password" [(ngModel)]="credenciales.password" name="password" required></ion-input>
-      </ion-item>
+        <form #f="ngForm">
 
-    </ion-list>
+          <ion-list>
 
-    <div padding>
-      <button ion-button block (click)="onLoginClicked(f)">LOGIN</button>
-    </div>
+            <ion-item>
+              <ion-label>Email</ion-label>
+              <ion-input type="text" [(ngModel)]="credenciales.email" name="email" required></ion-input>
+            </ion-item>
 
-  </form>
+            <ion-item>
+              <ion-label>Password</ion-label>
+              <ion-input type="password" [(ngModel)]="credenciales.password" name="password" required></ion-input>
+            </ion-item>
+
+          </ion-list>
+
+          <div padding>
+            <button ion-button block (click)="onLoginClicked(f)">LOGIN</button>
+          </div>
+
+        </form>
+
+      </div>
+    </ion-row>
+
+  </ion-grid>
 
 </ion-content>
