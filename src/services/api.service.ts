@@ -9,7 +9,7 @@ import {Subscription} from 'rxjs/Subscription';
 @Injectable()
 export class ApiService {
   // server URL
-  private baseURL = 'http://dondeestaciono.cloudapp.net:8080/';
+  private baseURL = 'http://dondeestaciono.cloudapp.net/';
   private timer: Observable<number>;
   private timerSubscription: Subscription;
 
