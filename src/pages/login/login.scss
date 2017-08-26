@@ -2,7 +2,7 @@ page-login {
 
   .login-page{
     //background-color: #5784ff;
-    background-image: url("../assets/img/fondo1.jpg");
+    background-image: url("../assets/img/fondo2.jpg");
     //background-image: url("../assets/img/fondo2.jpg");
     background-size: cover;
     display: flex;
@@ -14,8 +14,7 @@ page-login {
   }
 
   .login-page .form-container {
-    align-self: flex-end;
-    padding-bottom: 0;
+    align-self: flex-start;
     width: 100%;
   }
 
