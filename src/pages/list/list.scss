@@ -15,6 +15,7 @@ page-list {
   .content {
     display: flex;
     flex-direction: column;
+    background: rgba(250,25,50,.1) !important;
   }
 
   ion-grid {

@@ -1,5 +1,11 @@
 page-home {
+    ion-content {
+        background: rgba(250,25,50,.1) !important;
+    }
 
+    ion-item {
+      background: rgba(255,255,255,.2) !important;
+    }
 }
 
 .btn-cargar {
